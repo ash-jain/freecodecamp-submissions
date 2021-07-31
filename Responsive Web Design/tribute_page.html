@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FCC Tribute Page</title>
+
+    <style type="text/css">
+
+        @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+
+        #main {
+            box-sizing: border-box;
+            width: 100%;
+            min-height: 100vh;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            text-align: center;
+            gap: 5vh;
+            font-family: 'Quicksand', sans-serif;
+        }
+
+        #title {
+            width: 100%;
+            font-size: 2.5rem;
+            font-weight: bold;
+            background-color: #eee;
+        }
+
+        #image {
+            display: block;
+            padding: 0 10%;
+            width: 80%;
+            max-height: 60vh;
+            max-width: 2000px;
+        }
+
+        #img-caption {
+            font-family: monospace;
+        }
+
+        #tribute-info {
+            padding: 0 10vw;
+        }
+
+    </style>
+
+</head>
+<body>
+    <main id="main">
+        <span id="title">John Doe.</span>
+        <div id="img-div">
+            <img id="image" src="https://ik.imagekit.io/ashtrospection/tim-bogdanov-4uojMEdcwI8-unsplash_kiwlFTFpA.jpg?updatedAt=1627724743309" />
+            <div id="img-caption">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam, quos!</div>
+        </div>
+        <div id="tribute-info">
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure, error vel? Minus ipsa maxime maiores saepe debitis consequuntur quam, quisquam eligendi aliquid autem non sit fuga reiciendis vitae at nisi animi. Cupiditate sit voluptatem iste quibusdam minima. Obcaecati deleniti ratione itaque, doloribus repellat quasi quis! Maiores distinctio excepturi adipisci? Ipsa.
+            </p>
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non, vero eius? Dolor laborum, corrupti labore sit culpa eum! Assumenda reiciendis similique hic dignissimos error, esse earum ex eius nesciunt doloremque tempore inventore debitis quisquam delectus!
+            </p>
+        </div>
+        <a href="https://www.example.com/" target="_blank" id="tribute-link">Learn more about John Doe.</a>
+      </main>
+</body>
+</html>
