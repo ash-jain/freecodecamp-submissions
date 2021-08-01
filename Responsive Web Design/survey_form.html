@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FCC Survey Form</title>
+
+    <style type="text/css">
+
+        @import url('https://fonts.googleapis.com/css2?family=Baloo+Chettan+2:wght@600&display=swap');
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            text-align: center;
+            font-family: "Baloo Chettan 2", sans-serif;
+            color: #fff;
+            background-color: hsla(254.2, 87.8%, 40%, 0.9);
+        }
+
+        #survey-form {
+            margin: 5vh auto;
+            padding: 2.5vmax;
+            display: flex;
+            flex-direction: column;
+            width: 95%;
+            max-width: 600px;
+            gap: 2.5vh;
+            text-align: left;
+            color: hsl(254.2, 87.8%, 35%);
+            background-color: beige;
+        }
+
+        #survey-form > div {
+            display: flex;
+            flex-direction: column;
+        }
+
+        #survey-form > div > label:first-child {
+            font-size: 1.15rem;
+        }
+
+        input[type=text], input[type=email], input[type=number], select {
+            padding: 10px;
+            background-color: white;
+            border-color: hsla(254.2, 87.8%, 40%, 0.9);
+        }
+
+        textarea {
+            resize: none;
+        }
+
+        #survey-form > a {
+            align-self: center;
+        }
+
+        #submit {
+            padding: 8px 30px;
+            font-family: inherit;
+            font-size: 1.25rem;
+            color: white;
+            background-color: hsla(254.2, 87.8%, 40%, 0.9);
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1 id="title">Product Survey</h1>
+    <p id="description">Hello, dear customer! Please take a minute of your time to fill this form and help us understand you better, Thank you!</p>
+
+    <form action="" id="survey-form">
+
+        <div>
+            <label id="name-label" for="name">Name</label>
+            <input id="name" name="name" type="text" placeholder="Your Name" required />
+        </div>
+
+        <div>
+            <label id="email-label" for="email">E-mail</label>
+            <input id="email" name="email" type="email" placeholder="E-mail" required />
+        </div>
+
+        <div>
+            <label id="number-label" for="number">Age</label>
+            <input id="number" type="number" placeholder="Age" min="12" max="80" />
+        </div>
+
+        <div>
+            <label for="dropdown">How much coding experience do you have?</label>
+            <select id="dropdown" placeholder="select">
+            <optgroup label="Senior Developer">
+                <option>More than 10 years of experience.</option>
+                <option>7-10 years of experience.</option>
+                <option>4-7 years of experience.</option>     
+            </optgroup>
+            <optgroup label="Junior Developer">
+                <option>3-4 years of experience.</option>
+                <option>1-3 years of experience.</option>
+            </optgroup>
+            <option selected>I am learning to code.</option>
+            <option>I don't code.</option>
+            </select>
+        </div>
+
+        <div class="satisfaction">
+            <label>How pleased are you with our service?</label>
+            <span>
+            <input id="5" name="satisfication" type="radio" value="5" />
+            <label for="5">Extremely pleased.</label>
+            </span>
+            <span>
+            <input id="4" name="satisfication" type="radio" value="4" />
+            <label for="4">Pleased.</label>  
+            </span>
+            <span>
+            <input id="3" name="satisfication" type="radio" value="3" />
+            <label for="3">Neither pleased nor unpleased.</label>
+            </span>
+            <span>
+            <input id="2" name="satisfication" type="radio" value="2" />
+            <label for="2">Unpleased.</label>
+            </span>
+            <span>
+            <input id="1" name="satisfication" type="radio" value="1"/>
+            <label for="1">Extremely unpleased.</label>
+            </span>
+        </div>
+
+        <div>
+            <label>Which of the following department(s) do you think needs improvement?</label>
+            <span>
+            <input id="admin" type="checkbox" value="administration" />
+            <label for="admin">Administration.</label>
+            </span>
+            <span>
+            <input id="support" type="checkbox" value="support" />
+            <label for="support">Technical Support.</label>
+            </span>
+            <span>
+            <input id="qa-qt" type="checkbox" value="qa-qt" />
+            <label for="qa-qt">Quality Assurance/Testing.</label>
+            </span>
+            <span>
+            <input id="customer-relations" type="checkbox" value="customer-relations" />
+            <label for="customer-relations">Customer Relations.</label>
+            </span>
+        </div>
+
+        <div>
+            <label>Let us know your thoughts:</label>
+            <textarea placeholder="Comments" rows="5"></textarea>
+        </div>
+
+        <a href="#"><button id="submit">Submit</button></a>
+
+    </form>
+</body>
+</html>
