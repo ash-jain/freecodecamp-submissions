@@ -24,7 +24,7 @@ function checkCashRegister(price, cash, cid) {
       "QUARTER": 0,
       "DIME": 0,
       "NICKEL": 0,
-      "PENNTY": 0
+      "PENNY": 0
     };
 
     while (diff != 0) {
@@ -37,13 +37,13 @@ function checkCashRegister(price, cash, cid) {
       else if (diff >= 20 && cidObj["TWENTY"] >= 20) {
         diff -= 20;
         cidObj["TWENTY"] -= 20;
-        changeObj["TWENTY"] += 20
+        changeObj["TWENTY"] += 20;
       }
       else if (diff >= 10 && cidObj["TEN"] >= 10) {
         diff -= 10;
         cidObj["TEN"] -= 10;
         if (changeObj.hasOwnProperty("TEN"))
-          changeObj["TEN"] += 10
+          changeObj["TEN"] += 10;
         else
           changeObj["TEN"] = 10;
       }
@@ -51,7 +51,7 @@ function checkCashRegister(price, cash, cid) {
         diff -= 5;
         cidObj["FIVE"] -= 5;
         if (changeObj.hasOwnProperty("FIVE"))
-          changeObj["FIVE"] += 5
+          changeObj["FIVE"] += 5;
         else
           changeObj["FIVE"] = 5;
       }
@@ -59,7 +59,7 @@ function checkCashRegister(price, cash, cid) {
         diff -= 1;
         cidObj["ONE"] -= 1;
         if (changeObj.hasOwnProperty("ONE"))
-          changeObj["ONE"] += 1
+          changeObj["ONE"] += 1;
         else
           changeObj["ONE"] = 1;
       }
@@ -91,7 +91,7 @@ function checkCashRegister(price, cash, cid) {
         diff -= 0.01;
         cidObj["PENNY"] -= 0.01;
         if (changeObj.hasOwnProperty("PENNY"))
-          changeObj["PENNY"] += 0.01
+          changeObj["PENNY"] += 0.01;
         else
           changeObj["PENNY"] = 0.01;
       }
@@ -106,7 +106,7 @@ function checkCashRegister(price, cash, cid) {
     obj.status = "OPEN";
 
     if (changeObj["ONE HUNDRED"] > 0)
-      obj.change.push(["ONE HUNDRED", changeObj["ONE HUNDRED"]])
+      obj.change.push(["ONE HUNDRED", changeObj["ONE HUNDRED"]]);
     if (changeObj["TWENTY"] > 0)
       obj.change.push(["TWENTY", changeObj["TWENTY"]]);
     if (changeObj["TEN"] > 0)

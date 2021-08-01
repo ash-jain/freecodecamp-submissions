@@ -1,6 +1,5 @@
 function convertToRoman(num) {
     let romanNum = "";
-    let count;
 
     while (num > 0) {
       if (num >= 1000) {
